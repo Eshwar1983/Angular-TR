@@ -1,0 +1,10 @@
+.page-header {
+  background-color: darkslategrey;
+  border-bottom: 1px solid Blue;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

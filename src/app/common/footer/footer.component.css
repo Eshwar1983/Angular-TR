@@ -1,0 +1,9 @@
+.page-footer {
+  background-color: gray;
+  bottom: 0;
+  color: white;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
