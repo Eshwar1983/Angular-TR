@@ -1,0 +1,8 @@
+.page-wrapper {
+  height: 100%;
+  padding: 45px 15px 34px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
