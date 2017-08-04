@@ -8,11 +8,36 @@
   width: 100%;
   z-index: 1;
   .rights-label {
-  	flex: auto;
+    flex: auto;
     max-width: 320px;
+    padding-top: 3px;
   }
   .network-links {
-  	flex: auto;
+    flex: auto;
     max-width: calc(100% - 320px);
+    .social-network {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 5px 0 0;
+      margin: 0;
+      li {
+        a {
+          margin: 0 5px;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+          span {
+            border: 2px solid white;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            padding: 4px;
+          }
+        }
+      }
+    }
   }
 }
