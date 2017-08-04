@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  footerClick() {
+    console.log('footer clicked');
+  }
+
 }
