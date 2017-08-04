@@ -7,4 +7,12 @@
   left: 0;
   width: 100%;
   z-index: 1;
+  .rights-label {
+  	flex: auto;
+    max-width: 320px;
+  }
+  .network-links {
+  	flex: auto;
+    max-width: calc(100% - 320px);
+  }
 }
