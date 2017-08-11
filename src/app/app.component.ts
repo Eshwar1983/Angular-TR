@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -11,4 +11,9 @@ import { WrapperComponent } from './common/wrapper/wrapper.component';
 })
 export class AppComponent {
   title = 'app';
+
+
+  ngOnInit() {
+    console.log('Page loaded');
+  }
 }
