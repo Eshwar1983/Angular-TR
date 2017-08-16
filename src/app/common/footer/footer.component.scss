@@ -1,7 +1,9 @@
 .page-footer {
+  align-items: center;
   background-color: gray;
   bottom: 0;
   color: white;
+  display: flex;
   padding: 5px;
   position: fixed;
   left: 0;
@@ -9,13 +11,13 @@
   z-index: 1;
   .rights-label {
     align-items: center;
-    display: flex;
+    display: inline-flex;
     flex: auto;
     max-width: 320px;
   }
   .network-links {
     align-items: center;
-    display: flex;
+    display: inline-flex;
     flex: auto;
     justify-content: flex-end;
     max-width: calc(100% - 320px);
