@@ -1,0 +1,19 @@
+.page-wrapper {
+  background-color: white;
+  height: 100%;
+  padding: 52px 15px 44px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-wrapper {
+    padding-bottom: 88px;
+  }
+}
