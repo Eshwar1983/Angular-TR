@@ -13,7 +13,12 @@ export class HeaderComponent implements OnInit {
   }
 
   headerClick(){
-    console.log('header click')
+    //console.log('header click')
+  }
+
+  isMenuOpen:boolean = false;
+  menuStatus(){
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }
