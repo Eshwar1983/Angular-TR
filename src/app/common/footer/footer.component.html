@@ -4,20 +4,10 @@
   </div>
   <div class="col-6 network-links">
     <ul class="social-network">
-      <li>
-        <a href="javascript:;" name=""><span class="icon-facebook"></span></a>
-      </li>
-      <li>
-        <a href="javascript:;" name=""><span class="icon-googleplus"></span></a>
-      </li>
-      <li>
-        <a href="javascript:;" name=""><span class="icon-linkedin"></span></a>
-      </li>
-      <li>
-        <a href="javascript:;" name=""><span class="icon-twitter"></span></a>
-      </li>
-      <li>
-        <a href="javascript:;" name=""><span class="icon-youtube"></span></a>
+      <li *ngFor="let data of dataFromJSON">
+        <a [name]="data.type" [href]="data.data['url']" [target]="data.data['targetAttr']">
+          <span [class]="data.data.fontIcon.iconClass"></span>
+        </a>
       </li>
     </ul>
   </div>

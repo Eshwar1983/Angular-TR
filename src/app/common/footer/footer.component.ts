@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-footer',
@@ -7,13 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  dataFromJSON; 
+
+  constructor(private http: Http) { }
 
   ngOnInit() {
+    var obj;
+    this.getJSON().subscribe(
+      data => {
+        this.dataFromJSON = data;
+        console.log(this.dataFromJSON);
+      }, 
+      error => console.log(error)
+    );
   }
 
-  footerClick() {
-    console.log('footer clicked');
+  public getJSON(): Observable<any> {
+    return this.http.get("assets/data/social-network.json")
+      .map((res:any) => res.json())
   }
 
 }
