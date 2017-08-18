@@ -1,0 +1,56 @@
+[
+  {
+    "type": "facebook",
+    "data": {
+      "url": "https://www.facebook.com/login/",
+      "targetAttr": "_blank",
+      "fontIcon": {
+        "iconClass": "icon-facebook"
+      }
+    }
+  },
+
+  {
+    "type": "googleplus",
+    "data": {
+      "url": "https://plus.google.com/",
+      "targetAttr": "_blank",
+      "fontIcon": {
+        "iconClass": "icon-googleplus"
+      }
+    }
+  },
+
+  {
+    "type": "linkedin",
+    "data": {
+      "url": "https://in.linkedin.com/",
+      "targetAttr": "_blank",
+      "fontIcon": {
+        "iconClass": "icon-linkedin"
+      }
+    }
+  },
+
+  {
+    "type": "twitter",
+    "data": {
+      "url": "https://twitter.com/login/",
+      "targetAttr": "_blank",
+      "fontIcon": {
+        "iconClass": "icon-twitter"
+      }
+    }
+  },
+
+  {
+    "type": "youtube",
+    "data": {
+      "url": "https://www.youtube.com/",
+      "targetAttr": "_blank",
+      "fontIcon": {
+        "iconClass": "icon-youtube"
+      }
+    }
+  }
+]
