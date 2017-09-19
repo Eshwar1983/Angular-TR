@@ -1,5 +1,11 @@
-<div class="main-wrapper">
+<div class="main-wrapper" (click) = "wrpperClick()">
   <app-header></app-header>
   <app-wrapper></app-wrapper>
   <app-footer></app-footer>
+  <app-sidebar></app-sidebar>
+  <div style="z-index: 9999; position: absolute; top: 100px;">
+    <p>{{ showMessage }}</p>
+    <div (notify)="onNotifyClicked($event)">
+    </div>
+  </div>
 </div>

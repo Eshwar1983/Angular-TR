@@ -12,13 +12,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  /*headerClick(){
-    console.log('header click')
-  }*/
-
-  isMenuOpen:boolean = false;
-  menuStatus(){
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
 }
