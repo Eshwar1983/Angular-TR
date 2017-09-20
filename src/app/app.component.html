@@ -1,11 +1,6 @@
-<div class="main-wrapper" (click) = "wrpperClick()" [ngClass]="{'sidebar-open': toggleClass}">
+<div class="main-wrapper" (click) = "wrpperClick($event)" [ngClass]="{'sidebar-open': toggleClass}">
   <app-header></app-header>
   <app-wrapper></app-wrapper>
   <app-footer></app-footer>
-  <app-sidebar (notify)="smfunc($event)"></app-sidebar>
-  <!-- <div style="z-index: 9999; position: absolute; top: 100px;">
-    <p>{{ showMessage }}</p>
-    <div (notify)="onNotifyClicked($event)">
-    </div>
-  </div> -->
+  <app-sidebar (notify)="sidebarStatus($event)"></app-sidebar>
 </div>

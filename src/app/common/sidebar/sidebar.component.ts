@@ -12,22 +12,22 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() reviews: number;
+  @Input() reviews: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() notify: EventEmitter<boolean> = new EventEmitter<boolean>();
   isClass: boolean = false;
 
-  onClick(): void {
+  /*onClick(): void {
     console.log('Child element home clicked');
-  }
+  }*/
 
   isMenuOpen:boolean = false;
-  sidebar = 'out';
+  //sidebar = 'out';
   
   menuStatus(this){
-  this.isClass = !this.isClass;
-  this.notify.emit(this.isClass);
+    this.isClass = !this.isClass;
+    this.notify.emit(this.isClass);
     this.isMenuOpen = !this.isMenuOpen;
-    console.log('side bar clicked');
+    //console.log('side bar clicked');
   }
 
 }
