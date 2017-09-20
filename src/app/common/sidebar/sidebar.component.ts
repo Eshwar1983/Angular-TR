@@ -13,10 +13,10 @@ export class SidebarComponent implements OnInit {
   }
 
   @Input() reviews: number;
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
+  @Output() notify: EventEmitter<boolean> = new EventEmitter<boolean>();
+  isClass: boolean = false;
 
   onClick(): void {
-    this.notify.emit('Message from child');
     console.log('Child element home clicked');
   }
 
@@ -24,19 +24,10 @@ export class SidebarComponent implements OnInit {
   sidebar = 'out';
   
   menuStatus(this){
+  this.isClass = !this.isClass;
+  this.notify.emit(this.isClass);
     this.isMenuOpen = !this.isMenuOpen;
     console.log('side bar clicked');
-
-
-    /*this.sidebar = this.sidebar === 'out' ? 'in' : 'out';
-
-    if (this.sidebar === 'in') {
-      //document.body.classList.add('sidebar-open');
-      document.getElementById('mainWrap').classList.add('sidebar-open');
-    } else {
-      document.body.classList.remove('sidebar-open');
-      document.getElementById('mainWrap').classList.remove('sidebar-open')
-    }*/
   }
 
 }

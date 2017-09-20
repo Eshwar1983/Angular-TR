@@ -13,18 +13,24 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 })
 export class AppComponent {
   title = 'app';
-
-  showMessage:string = 'test';
+  toggleClass: boolean = false;
+  /*showMessage:string = 'test';*/
 
   ngOnInit() {
     console.log('Page loaded');
   }
 
-  onNotifyClicked(message:string): void {
+  /*onNotifyClicked(message:string): void {
     this.showMessage = message;
+  }*/
+  
+  smfunc($event) {
+    console.log();
+    this.toggleClass = $event;
   }
 
-  wrpperClick() {
+  wrpperClick($event) {
     //console.log('Main wrpper cliked');
+    //this.toggleClass = $event;
   }
 }
