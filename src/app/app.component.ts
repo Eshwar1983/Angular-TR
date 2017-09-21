@@ -15,23 +15,13 @@ export class AppComponent {
   title = 'app';
   toggleClass: boolean = false;
 
-  /*showMessage:string = 'test';
-
-  ngOnInit() {
-    console.log('Page loaded');
-  }
-
-  onNotifyClicked(message:string): void {
-    this.showMessage = message;
-  }*/
-
   sidebarStatus($event) {
-    console.log();
+    //console.log('$event', $event);
     this.toggleClass = $event;
   }
 
   wrpperClick($event) {
     //console.log('Main wrpper cliked');
-    //this.toggleClass = $event;
+    this.toggleClass = false;
   }
 }

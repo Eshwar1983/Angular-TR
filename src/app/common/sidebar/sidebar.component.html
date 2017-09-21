@@ -1,5 +1,5 @@
-<div class="sidebar-wrapper" [class.active]="isMenuOpen">
-  <a href="javascript:;" class="menubar-icon" (click)="menuStatus()"></a>
+<div (click)="stopPropagation($event)" class="sidebar-wrapper" [class.active]="isMenuOpen">
+  <a href="javascript:;" class="menubar-icon" (click)="menuStatus($event)"></a>
   <ul>
     <li>Home link</li>
     <li> About Link</li>

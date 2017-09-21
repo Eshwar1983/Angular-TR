@@ -2,5 +2,5 @@
   <app-header></app-header>
   <app-wrapper></app-wrapper>
   <app-footer></app-footer>
-  <app-sidebar (notify)="sidebarStatus($event)"></app-sidebar>
+  <app-sidebar (notify)="sidebarStatus($event)" [isMenuOpen] = "toggleClass"></app-sidebar>
 </div>
