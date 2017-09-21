@@ -15,13 +15,15 @@ export class AppComponent {
   title = 'app';
   toggleClass: boolean = false;
 
+  ngOnInit() {
+    console.log('Page loaded');
+  }
+
   sidebarStatus($event) {
-    //console.log('$event', $event);
     this.toggleClass = $event;
   }
 
   wrpperClick($event) {
-    //console.log('Main wrpper cliked');
     this.toggleClass = false;
   }
 }
