@@ -1,5 +1,6 @@
-<div class="main-wrapper">
+<div class="main-wrapper" (click) = "wrpperClick($event)" [ngClass]="{'sidebar-open': toggleClass}">
   <app-header></app-header>
   <app-wrapper></app-wrapper>
   <app-footer></app-footer>
+  <app-sidebar (notify)="sidebarStatus($event)" [isMenuOpen] = "toggleClass"></app-sidebar>
 </div>

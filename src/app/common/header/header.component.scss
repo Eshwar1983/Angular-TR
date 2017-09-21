@@ -15,49 +15,10 @@
     max-width: calc(100% - 30px);
   }
   .menu-bar {
-    background-color: white;
-    cursor: pointer;
+    background-color: transparent;
     flex: auto;
     height: 16px;
     padding: 5px 0;
-    position: relative;
     max-width: 25px;
-    &:after {
-      background-color: white;
-      border-top: 2px solid darkslategray;
-      bottom: 0;
-      content: "";
-      height: 6px;
-      left: 0;
-      position: absolute;
-      top: inherit;
-      transition: 0.4s;
-      width: 100%;
-    }
-    &:before {
-      background-color: white;
-      border-bottom: 2px solid darkslategray;
-      bottom: inherit;
-      content: "";
-      height: 6px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transition: 0.4s;
-      width: 100%;
-    }
-    &.active {
-      background-color: darkslategrey;
-      &:after {
-        border: none;
-        height: 4px;
-        transform: rotate(45deg) translate(-4px, -4px);
-      }
-      &:before {
-        border: none;
-        height: 4px;
-        transform: rotate(-45deg) translate(-4px, 4px);
-      }
-    }
   }
 }

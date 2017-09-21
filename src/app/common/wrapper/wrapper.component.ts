@@ -9,11 +9,6 @@ export class WrapperComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  bodyClick() {
-    console.log('page body cliked');
-  }
-  
 }

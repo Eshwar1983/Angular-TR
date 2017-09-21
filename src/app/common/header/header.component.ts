@@ -9,16 +9,6 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  /*headerClick(){
-    console.log('header click')
-  }*/
-
-  isMenuOpen:boolean = false;
-  menuStatus(){
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+  ngOnInit() { }
 
 }
