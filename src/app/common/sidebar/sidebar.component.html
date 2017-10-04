@@ -1,7 +1,7 @@
 <div (click)="stopPropagation($event)" class="sidebar-wrapper" [class.active]="isMenuOpen">
   <a href="javascript:;" class="menubar-icon" (click)="menuStatus($event)"></a>
   <ul>
-    <li>Home link</li>
-    <li> About Link</li>
+    <li><a routerLink="home" (click)="menuStatus($event)">Home link</a></li>
+    <li><a routerLink="about" (click)="menuStatus($event)">About Link</a></li>
   </ul>
 </div>
