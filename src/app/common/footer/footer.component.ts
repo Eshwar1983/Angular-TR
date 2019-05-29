@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get("assets/data/social-network.json")
+    return this.http.get("./assets/data/social-network.json")
       .map((res:any) => res.json())
   }
 
