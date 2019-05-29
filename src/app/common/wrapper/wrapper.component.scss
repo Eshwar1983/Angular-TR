@@ -1,15 +1,19 @@
 .page-wrapper {
   background-color: white;
-  height: 100%;
+  // height: 100%;
   padding: 52px 15px 44px;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  // width: 100%;
+  height: calc(100% - 96px);
+  overflow-y: auto;
+  width: calc(100% - 30px);
 }
 
 @media only screen and (max-width: 600px) {
   .page-wrapper {
-    padding-bottom: 88px;
+    padding-bottom: 90px;
+    height: calc(100% - 142px);
   }
 }

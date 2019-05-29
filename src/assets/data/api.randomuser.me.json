@@ -1,0 +1,62 @@
+{  
+   "results":[  
+      {  
+         "gender":"male",
+         "name":{  
+            "title":"mr",
+            "first":"felismino",
+            "last":"moreira"
+         },
+         "location":{  
+            "street":"505 rua treze ",
+            "city":"vitória da conquista",
+            "state":"piauí",
+            "postcode":38274,
+            "coordinates":{  
+               "latitude":"-74.3461",
+               "longitude":"-158.7140"
+            },
+            "timezone":{  
+               "offset":"+4:30",
+               "description":"Kabul"
+            }
+         },
+         "email":"felismino.moreira@example.com",
+         "login":{  
+            "uuid":"6aa0dfa5-c707-42c9-9bc2-ec2503824c62",
+            "username":"silverdog891",
+            "password":"poetry",
+            "salt":"WDbDjXL1",
+            "md5":"fd5b0cdeeb90d7955933cd6aa0b221b0",
+            "sha1":"b6f11cc9d7bc45c68019aad35585119617a3e95f",
+            "sha256":"65bb4afba6e66e328a3633adbcc9b53cffb5560e929adc03990899d7f82273fe"
+         },
+         "dob":{  
+            "date":"1984-08-15T02:02:01Z",
+            "age":34
+         },
+         "registered":{  
+            "date":"2005-01-21T21:21:08Z",
+            "age":14
+         },
+         "phone":"(02) 5127-4117",
+         "cell":"(18) 2077-4583",
+         "id":{  
+            "name":"",
+            "value":null
+         },
+         "picture":{  
+            "large":"https://randomuser.me/api/portraits/men/31.jpg",
+            "medium":"https://randomuser.me/api/portraits/med/men/31.jpg",
+            "thumbnail":"https://randomuser.me/api/portraits/thumb/men/31.jpg"
+         },
+         "nat":"BR"
+      }
+   ],
+   "info":{  
+      "seed":"89b6828b1212cdac",
+      "results":1,
+      "page":1,
+      "version":"1.2"
+   }
+}
