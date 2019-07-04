@@ -1,66 +1,31 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  /*name: 'customerEmailFilter',*/
-  name: 'filter',
+  name: 'customFilter'
 })
 @Injectable()
 export class FilterPipe implements PipeTransform {
-  /* transform(value: any, args?: any): any {
-    return null;
-  }
-  transform(items: any[], field: string, value: string): any[] {
-    if (!items) {
-      return [];
-    }
-    if (!field || !value) {
+  transform(items: any, customFilter: any, defaultFilter: boolean): any {
+    if (!customFilter) {
       return items;
     }
 
-    return items.filter(singleItem =>
-      singleItem[field].toLowerCase().includes(value.toLowerCase())
-    );
-  }
-  transform(value: any, args?: any): any {
-    if (!args) {
-      return value;
-    }
-    return value.filter((val) => {
-      let rVal = (val.id.toLocaleLowerCase().includes(args)) || (val.email.toLocaleLowerCase().includes(args));
-      return rVal;
-    })
-
-  }
-
-  transform(items: any[], searchText: string): any[] {
-    if (!items) return [];
-    if (!searchText) return items;
-    searchText = searchText.toLowerCase();
-    return items.filter(data => {
-      return data.toLowerCase().includes(searchText);
-    });
-  } */
-  transform(items: any, filter: any, defaultFilter: boolean): any {
-    if (!filter){
+    if (!Array.isArray(items)) {
       return items;
     }
 
-    if (!Array.isArray(items)){
-      return items;
-    }
-
-    if (filter && Array.isArray(items)) {
-      let filterKeys = Object.keys(filter);
+    if (customFilter && Array.isArray(items)) {
+      let filterKeys = Object.keys(customFilter);
 
       if (defaultFilter) {
         return items.filter(item =>
-            filterKeys.reduce((x, keyName) =>
-                (x && new RegExp(filter[keyName], 'gi').test(item[keyName])) || filter[keyName] == "", true));
+          filterKeys.reduce((x, keyName) =>
+            (x && new RegExp(customFilter[keyName], 'gi').test(item[keyName])) || customFilter[keyName] == "", true));
       }
       else {
         return items.filter(item => {
           return filterKeys.some((keyName) => {
-            return new RegExp(filter[keyName], 'gi').test(item[keyName]) || filter[keyName] == "";
+            return new RegExp(customFilter[keyName], 'gi').test(item[keyName]) || customFilter[keyName] == "";
           });
         });
       }

@@ -33,7 +33,7 @@
         End Data
       </div>
   </div>
-  <div class="row m-0" *ngFor="let project of customData | filter : {clientName: searchText, projectName:searchText,  startDate: searchText,  endDate: searchText}; let i=index;">
+  <div class="row m-0" *ngFor="let project of customData | customFilter : {clientName: searchText, projectName:searchText,  startDate: searchText,  endDate: searchText}; let i=index;">
     <div class="numb-col">
       {{i +1}}
     </div>
