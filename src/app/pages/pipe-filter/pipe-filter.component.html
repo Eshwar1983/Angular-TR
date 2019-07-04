@@ -1,0 +1,41 @@
+<h4>
+  pipe-filter works!
+</h4>
+<input type="text" [(ngModel)]="searchText" placeholder="Serach any fields"/>
+
+<div class="mt-2 data-table">
+  <div class="row m-0 header">
+      <div class="numb-col">
+          No.
+      </div>
+      <div class="col">
+        Client
+      </div>
+      <div class="col">
+        Project
+      </div>
+      <div class="col data-col">
+        Start Data
+      </div>
+      <div class="col data-col">
+        End Data
+      </div>
+  </div>
+  <div class="row m-0" *ngFor="let project of customData | customFilter : {clientName: searchText, projectName:searchText,  startDate: searchText,  endDate: searchText}; let i=index;">
+    <div class="numb-col">
+      {{i +1}}
+    </div>
+    <div class="col">
+      {{project.clientName}}
+    </div>
+    <div class="col">
+      {{project.projectName}}
+    </div>
+    <div class="col data-col">
+      {{project.startDate}}
+    </div>
+    <div class="col data-col">
+      {{project.endDate}}
+    </div>
+  </div>
+</div>

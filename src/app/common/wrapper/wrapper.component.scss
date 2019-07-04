@@ -4,6 +4,7 @@
   padding: 52px 15px 44px;
   position: fixed;
   left: 0;
+  overflow-y: auto;
   top: 0;
   // width: 100%;
   height: calc(100% - 96px);
@@ -14,6 +15,5 @@
 @media only screen and (max-width: 600px) {
   .page-wrapper {
     padding-bottom: 90px;
-    height: calc(100% - 142px);
   }
 }

@@ -1,9 +1,12 @@
 <div (click)="stopPropagation($event)" class="sidebar-wrapper" [class.active]="isMenuOpen">
   <a href="javascript:;" class="menubar-icon" (click)="menuStatus($event)"></a>
   <ul>
-    <li><a routerLink="home" #divClick (click)="menuStatus($event)">Home link</a></li>
+    <li><a routerLink="home" #divClick (click)="menuStatus($event)">Home (Input Output)</a></li>
     <li><a routerLink="about" (click)="menuStatus($event)">About Link</a></li>
     <li><a routerLink="projects" (click)="menuStatus($event)">Project List</a></li>
     <li><a routerLink="directivesNgSwitch" (click)="menuStatus($event)">Directives ngSwitch</a></li>
+    <li><a routerLink="PipeFilter" (click)="menuStatus($event)">Pipe Filter</a></li>
+    <li><a routerLink="Directives" (click)="menuStatus($event)">Host Directives</a></li>
+    <li><a routerLink="TemplateDrivenForm" (click)="menuStatus($event)">Template Driven Form</a></li>
   </ul>
 </div>
