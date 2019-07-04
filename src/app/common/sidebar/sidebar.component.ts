@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,10 +9,16 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
-
+  
   @Input() isMenuOpen: boolean;
   @Output() notify: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @ViewChild('divClick') divClick: ElementRef;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.divClick.nativeElement.click();
+    }, 200);
+  }
   
   menuStatus($event){
     this.isMenuOpen = !this.isMenuOpen;

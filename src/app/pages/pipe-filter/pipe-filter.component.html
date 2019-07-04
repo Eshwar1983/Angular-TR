@@ -1,0 +1,61 @@
+<h4>
+  pipe-filter works!
+</h4>
+<input type="text" [(ngModel)]="searchText" placeholder="Serach any fields"/>
+
+<!-- <table width="100%">
+  <tr>
+    <th>No.</th>
+    <th>Id</th>
+  </tr>
+  <tr *ngFor="let c of characters | filter : searchText;let i = index">
+    <th scope="row">{{i+1}}</th>
+    <td align="center">{{c}}</td>
+  </tr>
+
+</table>-->
+
+<div class="mt-2 data-table">
+  <div class="row m-0 header">
+      <div class="numb-col">
+          No.
+      </div>
+      <div class="col">
+        Client
+      </div>
+      <div class="col">
+        Project
+      </div>
+      <div class="col data-col">
+        Start Data
+      </div>
+      <div class="col data-col">
+        End Data
+      </div>
+  </div>
+  <div class="row m-0" *ngFor="let project of customData | filter : {clientName: searchText, projectName:searchText,  startDate: searchText,  endDate: searchText}; let i=index;">
+    <div class="numb-col">
+      {{i +1}}
+    </div>
+    <div class="col">
+      {{project.clientName}}
+    </div>
+    <div class="col">
+      {{project.projectName}}
+    </div>
+    <div class="col data-col">
+      {{project.startDate}}
+    </div>
+    <div class="col data-col">
+      {{project.endDate}}
+    </div>
+  </div>
+</div>
+<!-- <table *ngFor="let emp of customerData | filter: {name: searchText, Age:searchText,  blog: searchText}; let i=index;">
+    <tr>
+      <td style="width: 5%;">{{i +1}}</td>
+      <td style="width: 10%;">{{emp.name}}</td>
+      <td style="width: 5%;">{{emp.Age}}</td>
+      <td style="width: 15%;">{{emp.blog}}</td>
+    </tr>
+  </table> -->
