@@ -2,21 +2,6 @@
   Template Driven Form works!
 </h4>
 
-<!--<div>
-  <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
-     <input type="text" class="fortextbox" name="test" placeholder="email" [formControl]="formdata.controls['emailid']"><!-- formControlName="emailid"  -->
-     <!--<br/>
-     
-     <input type="password" class="fortextbox" name="passwd" placeholder="passwd" [formControl]="formdata.controls['passwd']"> <!-- formControlName="passwd" -->
-     <!--<br/>
-     
-     <input type="submit" class="forsubmit" value="Log In" [disabled]="!formdata.valid">
-  </form>
-</div>
-<p>
-  Email entered is : {{emailID}}
-</p>-->
-
 <div class="container">
   <form novalidate
       [formGroup]="myform">
@@ -36,11 +21,6 @@
            *ngIf="firstName.errors && (firstName.dirty || firstName.touched)">
         <p *ngIf="firstName.errors.required">First Name is required</p>
       </div>
-
-      <!--
-        <pre>Valid? {{ myform.controls.name.controls.firstName.valid }}</pre>
-        <pre>Dirty? {{ myform.controls.name.controls.firstName.dirty }}</pre>
-      -->
     </div>
 
     <div class="form-group"
@@ -77,11 +57,6 @@
       <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
     </div>
 
-    <!--
-      <pre>Valid? {{ myform.controls.email.valid }}</pre>
-      <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
-    -->
-
   </div>
 
   <div class="form-group"
@@ -100,10 +75,6 @@
       <p *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
     </div>
   </div>
-
-  <!--
-    <pre>{{ password.errors | json }}</pre>
-  -->
 
   <div class="form-group"
        [ngClass]="{
